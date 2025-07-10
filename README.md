@@ -25,12 +25,17 @@ npm install
 
 ### Development
 
-#### Option 1: Using cross-env (Recommended)
+#### Option 1: Using npm scripts (Recommended)
 ```bash
 npm run dev
 ```
 
-#### Option 2: Platform-specific scripts
+#### Option 2: Using cross-platform Node.js script
+```bash
+node start-dev.js
+```
+
+#### Option 3: Platform-specific scripts
 **Windows:**
 ```bash
 dev.bat
@@ -40,6 +45,11 @@ dev.bat
 ```bash
 chmod +x dev.sh
 ./dev.sh
+```
+
+#### Option 4: Manual with cross-env
+```bash
+npx cross-env NODE_ENV=development tsx server/index.ts
 ```
 
 ### Production Build
@@ -54,6 +64,7 @@ This app is designed to work on all platforms without issues:
 
 ### Environment Variables
 - Uses `cross-env` package for setting NODE_ENV across platforms
+- Cross-platform Node.js script (`start-dev.js`) for ultimate compatibility
 - Fallback scripts provided for Windows (`dev.bat`) and Unix (`dev.sh`)
 
 ### Server Binding
@@ -62,8 +73,9 @@ This app is designed to work on all platforms without issues:
 - No more "ENOTSUP" errors on Windows
 
 ### Package Dependencies
+- Updated to latest `tsx` version (eliminates deprecated package warnings)
 - All packages are stable and cross-platform compatible
-- No deprecated packages that cause build warnings
+- `.npmrc` configuration to suppress non-critical warnings
 
 ## Keyboard Shortcuts
 
