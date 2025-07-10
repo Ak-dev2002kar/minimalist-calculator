@@ -84,6 +84,8 @@ Preferred communication style: Simple, everyday language.
 ### Development Mode
 - Vite development server for frontend with HMR
 - Express server running via tsx for TypeScript execution
+- Cross-platform compatibility with cross-env for environment variables
+- Smart server binding (localhost → 127.0.0.1 → system default) for Windows compatibility
 - Database migrations via Drizzle Kit
 - Replit-specific optimizations for cloud development
 

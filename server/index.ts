@@ -60,11 +60,34 @@ app.use((req, res, next) => {
   // this serves both the API and the client.
   // It is the only port that is not firewalled.
   const port = 5000;
-  server.listen({
-    port,
-    host: "0.0.0.0",
-    reusePort: true,
-  }, () => {
-    log(`serving on port ${port}`);
-  });
+  
+  // Try different host configurations for cross-platform compatibility
+  const tryListen = async () => {
+    try {
+      // First try with localhost for better Windows compatibility
+      await new Promise<void>((resolve, reject) => {
+        server.listen(port, "localhost", () => {
+          log(`serving on port ${port} (localhost)`);
+          resolve();
+        }).on('error', reject);
+      });
+    } catch (error) {
+      try {
+        // Fallback to 127.0.0.1 if localhost fails
+        await new Promise<void>((resolve, reject) => {
+          server.listen(port, "127.0.0.1", () => {
+            log(`serving on port ${port} (127.0.0.1)`);
+            resolve();
+          }).on('error', reject);
+        });
+      } catch (error2) {
+        // Final fallback: let the system choose the interface
+        server.listen(port, () => {
+          log(`serving on port ${port} (system default)`);
+        });
+      }
+    }
+  };
+  
+  tryListen();
 })();

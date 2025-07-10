@@ -1,0 +1,122 @@
+npm install error
+npm warn deprecated @esbuild-kit/esm-loader@2.6.5: Merged into tsx: https://tsx.is
+npm warn deprecated @esbuild-kit/core-utils@3.3.2: Merged into tsx: https://tsx.is
+npm run dev error:
+npm run dev
+
+> rest-express@1.0.0 dev
+> NODE_ENV=development tsx server/index.ts
+
+'NODE_ENV' is not recognized as an internal or external command,
+operable program or batch file.
+another error:
+ARIJIT KAR@DESKTOP-RDN22S5 MINGW64 ~/Desktop/HTML APPS/APP DEVELOER FILES/rep lit final data files/OfflineNoteStudio (main)
+$ npm install cross-env --save-dev
+
+added 1 package, and audited 480 packages in 6s
+
+63 packages are looking for funding
+  run `npm fund` for details
+
+9 vulnerabilities (1 low, 8 moderate)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+
+ARIJIT KAR@DESKTOP-RDN22S5 MINGW64 ~/Desktop/HTML APPS/APP DEVELOER FILES/rep lit final data files/OfflineNoteStudio (main)
+$ npm run dev
+
+> rest-express@1.0.0 dev
+> NODE_ENV=development tsx server/index.ts
+
+'NODE_ENV' is not recognized as an internal or external command,
+operable program or batch file.
+
+ARIJIT KAR@DESKTOP-RDN22S5 MINGW64 ~/Desktop/HTML APPS/APP DEVELOER FILES/rep lit final data files/OfflineNoteStudio (main)
+another error:
+ARIJIT KAR@DESKTOP-RDN22S5 MINGW64 ~/Desktop/HTML APPS/APP DEVELOER FILES/rep lit final data files/OfflineNoteStudio (main)
+$ npm run dev
+
+> rest-express@1.0.0 dev
+> cross-env NODE_ENV=development tsx server/index.ts
+
+node:events:496
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen ENOTSUP: operation not supported on socket 0.0.0.0:5000
+    at Server.setupListenHandle [as _listen2] (node:net:1918:21)
+    at listenInCluster (node:net:1997:12)
+    at node:net:2206:7
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:2
+1)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1976:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:2
+1) {
+  code: 'ENOTSUP',
+  errno: -4049,
+  syscall: 'listen',
+  address: '0.0.0.0',
+  port: 5000
+}
+
+Node.js v22.17.0
+
+ARIJIT KAR@DESKTOP-RDN22S5 MINGW64 ~/Desktop/HTML APPS/APP DEVELOER FILES/rep lit final data files/OfflineNoteStudio (main)
+$ 
+another error:
+ } else {
+    serveStatic(app);
+  }
+
+  // ALWAYS serve the app on port 5000
+  // this serves both the API and the client.
+  // It is the only port that is not firewalled.
+  const port = 5000;
+  server.listen({
+    port,
+    host: "0.0.0.0",
+    reusePort: true,
+  }, () => {
+    log(`serving on port ${port}`);
+  });
+})();
+another error:
+ARIJIT KAR@DESKTOP-RDN22S5 MINGW64 ~/Desktop/HTML APPS/APP DEVELOER FILES/rep lit final data files/OfflineNoteStudio (main)
+$ npm run dev
+
+> rest-express@1.0.0 dev
+> cross-env NODE_ENV=development tsx server/index.ts
+
+node:events:496
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen ENOTSUP: operation not supported on socket ::1:5000
+    at Server.setupListenHandle [as _listen2] (node:net:1918:21)
+    at listenInCluster (node:net:1997:12)
+    at GetAddrInfoReqWrap.callback (node:net:2206:7)
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:134:8)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1976:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:2
+1) {
+  code: 'ENOTSUP',
+  errno: -4049,
+  syscall: 'listen',
+  address: '::1',
+  port: 5000
+}
+
+Node.js v22.17.0
+
+ARIJIT KAR@DESKTOP-RDN22S5 MINGW64 ~/Desktop/HTML APPS/APP DEVELOER FILES/rep lit final data files/OfflineNoteStudio (main)
+$
+
+
